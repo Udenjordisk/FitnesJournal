@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PZR-Ab-S6m">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="SHE-fM-7OD">
+            <objects>
+                <navigationController id="PZR-Ab-S6m" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BiM-Ij-0Gd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Phx-v5-UC4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Glh-tY-twd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-823" y="82"/>
+        </scene>
+        <!--Главная-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UdenJournal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="VwB-SK-pnB">
+                                <rect key="frame" x="20" y="330.5" width="374" height="402"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bP-lw-pdr">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="374" id="Amz-CR-4NL"/>
+                                            <constraint firstAttribute="height" constant="63" id="bX2-A3-yEU"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="+ Добавить тренировку">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="QFO-Rv-mrg" kind="show" id="phP-Y0-LLc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nW4-jU-S8A">
+                                        <rect key="frame" x="0.0" y="113" width="374" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="RdU-Mc-Z9m"/>
+                                            <constraint firstAttribute="width" constant="374" id="oNR-wB-DhQ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Дневник тренировок">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="6jo-3w-yhN" kind="show" id="Ls4-70-PBa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uit-JA-ubg">
+                                        <rect key="frame" x="0.0" y="226" width="374" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="cJt-we-utA"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="jub-oN-TqK"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="63" id="qpI-10-zMj"/>
+                                            <constraint firstAttribute="width" constant="374" id="sFI-oa-Jpv"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Начать тренировку">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="RvB-IJ-3FH" kind="show" id="2pX-Pe-MLg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BB9-6R-cj2">
+                                        <rect key="frame" x="0.0" y="339" width="374" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="D3M-gg-dBQ"/>
+                                            <constraint firstAttribute="width" constant="374" id="IJc-Vr-NCh"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="63" id="chz-RM-dUF"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="n9z-Bk-x5A"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Настройки">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="ZDw-FH-HGJ" kind="showDetail" id="8r4-f6-hPy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="bgh-8q-bWv">
+                                <rect key="frame" x="20" y="155" width="374" height="95"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UdenTraining" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0p9-3n-cI0">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="7ns-ko-2Oa"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="7oQ-mA-12O"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="SaE-ui-DPb"/>
+                                            <constraint firstAttribute="width" constant="374" id="gQX-aE-znl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Двигайся и побеждай" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOE-G8-jms">
+                                        <rect key="frame" x="140" y="66" width="234" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="6UX-aH-VF4"/>
+                                            <constraint firstAttribute="width" constant="234" id="PAO-Tx-6Vm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="bgh-8q-bWv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1MF-SD-tJ9"/>
+                            <constraint firstItem="VwB-SK-pnB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Clw-YF-zC2"/>
+                            <constraint firstItem="bgh-8q-bWv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="67" id="GlC-J1-e2k"/>
+                            <constraint firstItem="VwB-SK-pnB" firstAttribute="top" secondItem="bgh-8q-bWv" secondAttribute="bottom" constant="80.5" id="SdC-Pl-mz1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bgh-8q-bWv" secondAttribute="trailing" constant="20" id="XiJ-k4-XNE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VwB-SK-pnB" secondAttribute="trailing" constant="20" id="vXV-qb-UXA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Главная" id="LdU-8t-tUT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="81.696428571428569"/>
+        </scene>
+        <!--Дневник тренировок-->
+        <scene sceneID="XSE-sU-IDK">
+            <objects>
+                <tableViewController id="6jo-3w-yhN" customClass="TrainingJournalVC" customModule="UdenJournal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="368-hy-RtE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="journalCell" id="72x-1I-HTc">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="72x-1I-HTc" id="S2J-8P-PmZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6jo-3w-yhN" id="5Mf-Yj-aFz"/>
+                            <outlet property="delegate" destination="6jo-3w-yhN" id="9F9-8e-0MG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Дневник тренировок" id="ysv-dM-Mc5">
+                        <barButtonItem key="rightBarButtonItem" title="Очистить" id="tcU-LP-pQ8">
+                            <connections>
+                                <action selector="pressCleanButton:" destination="6jo-3w-yhN" id="5am-v6-YNw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bm2-mM-Xoj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="870" y="82"/>
+        </scene>
+        <!--Добавить тренировку-->
+        <scene sceneID="kEr-uS-X0J">
+            <objects>
+                <viewController id="QFO-Rv-mrg" customClass="NewTrainingVC" customModule="UdenJournal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FYc-2V-rTW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="03A-rm-KOp">
+                                <rect key="frame" x="0.0" y="88" width="414" height="315"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="exCell" id="Wqo-6G-r7n">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wqo-6G-r7n" id="sMU-D9-UNF">
+                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="c7Z-Vu-BVa">
+                                <rect key="frame" x="20" y="415" width="374" height="415"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="9rD-IY-XAC">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="237"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Название упражнения" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BaB-40-uC6">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="63"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="374" id="9Gr-Le-WFX"/>
+                                                    <constraint firstAttribute="height" constant="63" id="gtx-Vt-LGt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="aX8-en-51D">
+                                                <rect key="frame" x="0.0" y="87" width="374" height="63"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Подходы" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7HP-YB-5eo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="175" height="63"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="175" id="9Za-Ts-zvV"/>
+                                                            <constraint firstAttribute="height" constant="63" id="OPo-Dc-p2c"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Повторения" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Th-wz-iiz">
+                                                        <rect key="frame" x="199" y="0.0" width="175" height="63"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="63" id="JeN-IU-cVl"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Вес" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vTJ-ur-qFY">
+                                                <rect key="frame" x="0.0" y="174" width="374" height="63"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="63" id="cT4-cp-Iad"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="374" id="lro-aC-MQe"/>
+                                            <constraint firstAttribute="height" constant="237" id="o1n-O5-rC5"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2FG-ih-82p">
+                                        <rect key="frame" x="0.0" y="263" width="374" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="esf-d5-MqF"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Добавить упражнение">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="saveExercise:" destination="QFO-Rv-mrg" eventType="touchUpInside" id="aci-Mx-i63"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5I-94-Pc7">
+                                        <rect key="frame" x="0.0" y="352" width="374" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="vCg-nH-Wad"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Сохранить тренировку">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="saveTraining:" destination="QFO-Rv-mrg" eventType="touchUpInside" id="and-H8-KB8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fb2-yS-l44"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="c7Z-Vu-BVa" firstAttribute="leading" secondItem="FYc-2V-rTW" secondAttribute="leadingMargin" id="0HR-zo-Fmb"/>
+                            <constraint firstItem="03A-rm-KOp" firstAttribute="centerX" secondItem="c7Z-Vu-BVa" secondAttribute="centerX" id="9aW-A8-bNT"/>
+                            <constraint firstItem="fb2-yS-l44" firstAttribute="trailing" secondItem="c7Z-Vu-BVa" secondAttribute="trailing" constant="20" id="Mlv-n4-6Wf"/>
+                            <constraint firstItem="c7Z-Vu-BVa" firstAttribute="leading" secondItem="fb2-yS-l44" secondAttribute="leading" constant="20" id="TdB-qs-DJ4"/>
+                            <constraint firstItem="03A-rm-KOp" firstAttribute="leading" secondItem="fb2-yS-l44" secondAttribute="leading" id="a5J-mg-gL8"/>
+                            <constraint firstItem="03A-rm-KOp" firstAttribute="top" secondItem="fb2-yS-l44" secondAttribute="top" id="ojS-Q4-m2M"/>
+                            <constraint firstItem="c7Z-Vu-BVa" firstAttribute="top" secondItem="03A-rm-KOp" secondAttribute="bottom" constant="12" id="yOj-Gv-PPR"/>
+                            <constraint firstItem="fb2-yS-l44" firstAttribute="bottom" secondItem="c7Z-Vu-BVa" secondAttribute="bottom" constant="32" id="zNC-Nm-kWa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Добавить тренировку" leftItemsSupplementBackButton="YES" id="PRV-Iz-EJf"/>
+                    <connections>
+                        <outlet property="activityNameField" destination="BaB-40-uC6" id="0yB-st-0BK"/>
+                        <outlet property="repeatCountField" destination="8Th-wz-iiz" id="d0c-0Q-AxU"/>
+                        <outlet property="setsCountField" destination="7HP-YB-5eo" id="91O-b5-vlX"/>
+                        <outlet property="tableView" destination="03A-rm-KOp" id="0M0-GA-qxi"/>
+                        <outlet property="weightField" destination="vTJ-ur-qFY" id="Q5f-NZ-ELB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vop-If-d1F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869.56521739130437" y="-616.07142857142856"/>
+        </scene>
+        <!--SettingsVC-->
+        <scene sceneID="wlB-3B-cvD">
+            <objects>
+                <viewController id="ZDw-FH-HGJ" customClass="SettingsVC" customModule="UdenJournal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FMz-aU-82q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Время отдыха:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGg-RV-zK3">
+                                <rect key="frame" x="20" y="247" width="281" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="0eX-lD-bK1">
+                                <rect key="frame" x="300" y="247" width="93.999999999999886" height="32.000000000000227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="pressStepper:" destination="ZDw-FH-HGJ" eventType="valueChanged" id="snY-Uw-X1X"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vGq-bh-P9c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="chilloutLabel" destination="nGg-RV-zK3" id="0oT-We-oYf"/>
+                        <outlet property="stepper" destination="0eX-lD-bK1" id="LfL-aC-Nw7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Di-Eh-brG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="789.50892857142856"/>
+        </scene>
+        <!--Тренировка-->
+        <scene sceneID="hI9-tY-wXW">
+            <objects>
+                <viewController id="RvB-IJ-3FH" customClass="GoTrainingPreviewVC" customModule="UdenJournal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KlE-PU-jHS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Упражнения на сегодня:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKb-Ch-JCc">
+                                <rect key="frame" x="20" y="128" width="245" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="5Xw-pz-T5H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Упражнения будут здесь" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dkm-XP-Cht">
+                                <rect key="frame" x="20" y="176" width="374" height="426"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGb-T5-5ce">
+                                <rect key="frame" x="20" y="599" width="374" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="gO1-lf-zKa"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Начать тренировку">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startTrainingButton:" destination="RvB-IJ-3FH" eventType="touchUpInside" id="9dy-UD-9d0"/>
+                                    <segue destination="bLG-29-z3I" kind="show" id="Ayz-wO-GVH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xM3-Ew-ubK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dkm-XP-Cht" firstAttribute="trailing" secondItem="KlE-PU-jHS" secondAttribute="trailingMargin" id="0iY-LD-T1b"/>
+                            <constraint firstItem="Dkm-XP-Cht" firstAttribute="leading" secondItem="AGb-T5-5ce" secondAttribute="leading" id="4EA-4y-XGl"/>
+                            <constraint firstItem="Dkm-XP-Cht" firstAttribute="trailing" secondItem="AGb-T5-5ce" secondAttribute="trailing" id="6kG-bQ-X1x"/>
+                            <constraint firstItem="GKb-Ch-JCc" firstAttribute="top" secondItem="xM3-Ew-ubK" secondAttribute="top" constant="40" id="TiZ-Ce-5sY"/>
+                            <constraint firstItem="AGb-T5-5ce" firstAttribute="top" secondItem="Dkm-XP-Cht" secondAttribute="bottom" constant="-3" id="Wn4-TC-p2v"/>
+                            <constraint firstItem="xM3-Ew-ubK" firstAttribute="bottom" secondItem="AGb-T5-5ce" secondAttribute="bottom" constant="196" id="bKq-Nh-hqQ"/>
+                            <constraint firstItem="GKb-Ch-JCc" firstAttribute="leading" secondItem="Dkm-XP-Cht" secondAttribute="leading" id="cFR-ar-wHZ"/>
+                            <constraint firstItem="Dkm-XP-Cht" firstAttribute="top" secondItem="GKb-Ch-JCc" secondAttribute="bottom" constant="21" id="puy-di-fkG"/>
+                            <constraint firstItem="GKb-Ch-JCc" firstAttribute="leading" secondItem="KlE-PU-jHS" secondAttribute="leadingMargin" id="sMk-Ua-mf7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Тренировка" id="8Mf-cl-ViW"/>
+                    <connections>
+                        <outlet property="practiceForDayLabel" destination="Dkm-XP-Cht" id="xYb-4f-hNb"/>
+                        <outlet property="startButton" destination="AGb-T5-5ce" id="N6j-YJ-BD5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJe-s1-bRN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869.56521739130437" y="789.50892857142856"/>
+        </scene>
+        <!--Go TrainingVC-->
+        <scene sceneID="zHl-ja-kRT">
+            <objects>
+                <viewController id="bLG-29-z3I" customClass="GoTrainingVC" customModule="UdenJournal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1h3-o1-xaI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Упражнения: 0/3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fg7-Rr-bph">
+                                <rect key="frame" x="0.0" y="104" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="udR-Fa-vDV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название упражнения" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLx-BI-2rn">
+                                <rect key="frame" x="72" y="156" width="267" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="EHR-tu-BBM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Кол-во повторений по кол-во кг" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEz-UZ-F3D">
+                                <rect key="frame" x="45" y="435" width="321" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="gXa-Is-uw9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подход 0/3:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZxN-rT-krj">
+                                <rect key="frame" x="72" y="375.5" width="250" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9m-e7-EiW">
+                                <rect key="frame" x="20" y="601" width="374" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Pnx-9s-rVp"/>
+                                    <constraint firstAttribute="height" constant="63" id="U8u-4j-ZNJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Готово">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pressStartButton:" destination="bLG-29-z3I" eventType="touchUpInside" id="Sqn-Vc-blc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Таймер" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDv-bY-dBP">
+                                <rect key="frame" x="162.5" y="216" width="89" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="jhj-YJ-eO9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cyF-IQ-hTU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cLx-BI-2rn" firstAttribute="top" secondItem="fg7-Rr-bph" secondAttribute="bottom" constant="8" symbolic="YES" id="0uh-kJ-9j5"/>
+                            <constraint firstItem="fg7-Rr-bph" firstAttribute="trailing" secondItem="cyF-IQ-hTU" secondAttribute="trailing" id="32I-pk-HbK"/>
+                            <constraint firstItem="A9m-e7-EiW" firstAttribute="leading" secondItem="cyF-IQ-hTU" secondAttribute="leading" constant="20" id="4WE-yP-oqa"/>
+                            <constraint firstItem="A9m-e7-EiW" firstAttribute="top" secondItem="IEz-UZ-F3D" secondAttribute="bottom" constant="139.5" id="5wr-6n-ypN"/>
+                            <constraint firstItem="cyF-IQ-hTU" firstAttribute="trailing" secondItem="A9m-e7-EiW" secondAttribute="trailing" constant="20" id="CvI-qi-fEf"/>
+                            <constraint firstItem="cyF-IQ-hTU" firstAttribute="trailing" secondItem="cLx-BI-2rn" secondAttribute="trailing" constant="75" id="Ioe-YE-m2e"/>
+                            <constraint firstItem="ZxN-rT-krj" firstAttribute="top" secondItem="cLx-BI-2rn" secondAttribute="bottom" constant="187.5" id="Ob4-Wp-frt"/>
+                            <constraint firstItem="cyF-IQ-hTU" firstAttribute="trailing" secondItem="cLx-BI-2rn" secondAttribute="trailing" constant="75" id="Pbf-uH-TVN"/>
+                            <constraint firstItem="cyF-IQ-hTU" firstAttribute="trailing" secondItem="IEz-UZ-F3D" secondAttribute="trailing" constant="48" id="R8Z-Gg-XXH"/>
+                            <constraint firstItem="IEz-UZ-F3D" firstAttribute="top" secondItem="ZxN-rT-krj" secondAttribute="bottom" constant="32" id="So9-SE-nYP"/>
+                            <constraint firstItem="cLx-BI-2rn" firstAttribute="leading" secondItem="cyF-IQ-hTU" secondAttribute="leading" constant="72" id="UCd-AI-XJk"/>
+                            <constraint firstItem="dDv-bY-dBP" firstAttribute="top" secondItem="cLx-BI-2rn" secondAttribute="bottom" constant="28" id="XPh-xi-lPQ"/>
+                            <constraint firstItem="dDv-bY-dBP" firstAttribute="centerX" secondItem="cyF-IQ-hTU" secondAttribute="centerX" id="YqM-Nw-cdm"/>
+                            <constraint firstItem="IEz-UZ-F3D" firstAttribute="leading" secondItem="cyF-IQ-hTU" secondAttribute="leading" constant="45" id="aed-pW-31J"/>
+                            <constraint firstItem="cyF-IQ-hTU" firstAttribute="trailing" secondItem="ZxN-rT-krj" secondAttribute="trailing" constant="92" id="dpd-NL-R6L"/>
+                            <constraint firstItem="IEz-UZ-F3D" firstAttribute="top" secondItem="ZxN-rT-krj" secondAttribute="bottom" constant="32" id="f1d-cD-jxk"/>
+                            <constraint firstItem="ZxN-rT-krj" firstAttribute="leading" secondItem="cyF-IQ-hTU" secondAttribute="leading" constant="72" id="fVS-TF-gZK"/>
+                            <constraint firstItem="ZxN-rT-krj" firstAttribute="top" secondItem="dDv-bY-dBP" secondAttribute="bottom" constant="127.5" id="fzr-IJ-J69"/>
+                            <constraint firstItem="fg7-Rr-bph" firstAttribute="leading" secondItem="cyF-IQ-hTU" secondAttribute="leading" id="p3t-uI-fgt"/>
+                            <constraint firstItem="cLx-BI-2rn" firstAttribute="leading" secondItem="cyF-IQ-hTU" secondAttribute="leading" constant="72" id="rvC-8b-JIz"/>
+                            <constraint firstItem="fg7-Rr-bph" firstAttribute="top" secondItem="cyF-IQ-hTU" secondAttribute="top" constant="16" id="tjF-kj-JkG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="E6f-sI-hYN"/>
+                    <connections>
+                        <outlet property="countOfPracticeLabel" destination="fg7-Rr-bph" id="ctW-lU-0Wl"/>
+                        <outlet property="practiceInfoLabel" destination="IEz-UZ-F3D" id="fSD-JY-YKD"/>
+                        <outlet property="practiceNameLabel" destination="cLx-BI-2rn" id="ETG-IL-e7z"/>
+                        <outlet property="setsLabel" destination="ZxN-rT-krj" id="6cB-5C-zXx"/>
+                        <outlet property="startButton" destination="A9m-e7-EiW" id="ljj-iN-s3F"/>
+                        <outlet property="timerLabel" destination="dDv-bY-dBP" id="03S-Is-LGv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zZE-rs-zDn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1737.68115942029" y="789.50892857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
